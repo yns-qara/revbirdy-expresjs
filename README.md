@@ -26,7 +26,19 @@ DB_PASSWORD=your-password
 DB_NAME=your-database-name
 ```
 
-4. Start the application.
+4. Create a database.
+
+```
+create schema revdb;
+use revdb;
+CREATE TABLE users (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  email VARCHAR(255) NOT NULL
+);
+```
+
+
+5. Start the application.
 
 ```
 node app.py
